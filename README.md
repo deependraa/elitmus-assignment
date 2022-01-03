@@ -55,9 +55,8 @@ And this will run the project on the port as: http://127.0.0.1:8000/
 
 You can find the live project here at:
 
-      https://elitmusdeependra.herokuapp.com/ 
-      
-but it might give a connection error of TCP IP due to static files or i might have resolved that problem till date you open the project
+      https://elitmusdeependras.herokuapp.com/
+
 I would recommend to run the project on localhost to get look in to admin section
 
 of you want to go to the admin section onec your server id live on local host just type :

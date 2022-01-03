@@ -1,0 +1,58 @@
+{% extends 'base.html' %} {%load static%} {% block content %}
+<div class="sevent_main">
+  <div class="sevent_first" style="display: grid">
+    <div class="sevent_det">
+      <h1>{{advertisement.title}}</h1>
+      <p>{{advertisement.content}}</p>
+    </div>
+    <h2>Comments</h2>
+    {% if user.is_authenticated %}
+      <div class="comment-box col-lg-8 col-md-8 col-12">
+        <form action=""  method="POST">
+          {% csrf_token %} {{c_form}}<br />
+          <button class="buttonsub2" type="submit"  name="new_comment" style="margin-top: 1rem">
+            Post
+          </button>
+        </form>
+      </div>
+    {% else %}
+      <h5>You need to be registered to comment on the post</h5>
+    {% endif %}
+
+
+    <div class="comments row">
+      {% if advertisement.comment_set.all %}
+        {% for comm in advertisement.comment_set.all %}
+        <div class="sevent_first col-lg-8 col-12" style="display: grid">
+          <div style="display: flex">
+            <div class="comment_author">
+              <p><b>{{comm.user}}</b></p>
+            </div>
+            <div class="comment_time" style="padding-left: 20px">
+              <p><b>{{comm.created}}</b></p>
+            </div>
+          </div>
+          <div class="comment_content" style="padding-left: 16px">
+            <p>{{comm.body}}</p>
+          </div>
+        </div>
+        {% endfor %}
+      {% endif %}
+    </div>
+  </div>
+
+  <!-- <div class="comments row">
+    <div class=" sevent_first comment_content col-lg-8 col-12">
+      <div style="display:flex;justify-content: space-around;">
+        <div class="comment_author">
+          <p>Deependra singh</p>
+        </div>
+        <div class="comment_time">
+          <p>12 Aug 2022</p>
+        </div>
+      </div>
+    </div>
+  </div> -->
+</div>
+
+{% endblock %}

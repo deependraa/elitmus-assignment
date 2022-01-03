@@ -1,0 +1,78 @@
+{% extends 'base.html' %} {%load static%} {% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-12">
+            <div style="display: flex; justify-content: space-around;">
+                <div class="divmain1">
+                    <h1>Your Published advertisements:</h1>
+                </div>
+                <div class="divmain2">
+                    <a href="{% url 'posts:create_post' %}" class="buttonsub2" style="margin-top: 0;">
+                        Create New Advertisement
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+        {% for obj in logged_in_user_post %}
+            <div class="col-lg-8 col-12 event_name">
+                <div class="event_head">
+                    <h1><a href="{% url 'posts:advertisement' obj.id %}">{{obj.title}}</a></h1>
+                </div>
+                <div class="DandT">
+                    <h5>Date and Time:- 2 Oct 2020 11AM Onwards</h5>
+                </div>
+                <div class="enent_details" style="
+                width: 100%;">
+                    <p>{{obj.content}}</p>
+                </div>
+                <a href="{% url 'posts:post_update' obj.pk %}" class="buttonsub2">Edit</a>
+                <a href="{% url 'posts:post_delete' obj.pk %}" class="buttonsub2"  >Delete</a>
+            </div>
+        {% endfor %}
+        
+
+        
+
+
+    </div>
+</div>
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title" id="exampleModalLabel">Modal title</h3>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" style="font-size:15px">
+          Are you sure you want to delete this post?Ones deleted it will removed permanently,
+        </div>
+        <div class="modal-footer">
+          <a style="font-size:15px" type="button" class="buttonsub2" data-dismiss="modal">Close</a>
+          <a href="" style="font-size:15px" type="button" class="buttonsub2" id="delete_post_id">Delete Post</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+      
+  </script>
+<script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+{% endblock %}

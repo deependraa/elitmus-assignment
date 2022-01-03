@@ -1,0 +1,39 @@
+{% extends 'base.html' %} {%load static%} {% block content %}
+{% if not request.user == obj.author.user %}
+<div class="sevent_main">
+    <div class="sevent_first" style="display: grid;">
+      <div class="sevent_det">
+        <h1>{{post.title}}</h1>
+        <form action="" method="POST" enctype="multipart/form-data">
+          {% comment %} <textarea placeholder="" rows="20" name="comment[text]" id="comment_text" cols="60" class="ui-autocomplete-input" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true" style="margin-top: 10px; margin-bottom: 0px; height: 300px;">
+              {{post.content}}
+          </textarea><br> {% endcomment %}
+          {% csrf_token %}
+          {{form}}
+          <button class="buttonsub2" type="submit" style="margin-top: 1rem;">Update post</button>
+        </form>
+      </div>
+        
+      </div>  
+    </div>
+  
+    <!-- <div class="comments row">
+      <div class=" sevent_first comment_content col-lg-8 col-12">
+        <div style="display:flex;justify-content: space-around;">
+          <div class="comment_author">
+            <p>Deependra singh</p>
+          </div>
+          <div class="comment_time">
+            <p>12 Aug 2022</p>
+          </div>
+        </div>
+      </div>
+    </div> -->
+  </div>
+
+{% else %}
+  <h5>You need to be the aouthor of the post to edit it</h5>
+{% endif %}
+
+
+{% endblock %}

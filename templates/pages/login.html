@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{%load static%}
+
+{% block content %}
+<div class="signupcontainer">
+    <div class="container">
+      <div class="contents" style="display: flex;">
+        <div class="div1">
+          <h1 class="login-h1">Login</h1>
+        <div class="infodiv">
+            <form action="{% url 'login' %}" method="POST">
+              {% csrf_token %}
+            <div class="input-group">
+              <lable for="email" class="input-group-addon" id="basic-addon1">Email</lable>
+              <div class="input_class">
+                <input type="email" name="email" class="form-input" placeholder="peterparker@gmail.com" required>
+                <span class="focus-border"></span>
+              </div>
+            </div>
+            <div class="input-group">
+              <lable for="Phonenumber" class="input-group-addon" id="basic-addon1">Password</lable>
+              <div class="input_class">
+                <input type="Password" name="password" class="form-input" placeholder="*********" required>
+                <span class="focus-border"></span>
+              </div>
+            </div>
+            <div class="buttonsign">
+              <button class="buttonsub2" type="submit">LogIn</button>
+            </div>
+          </form>
+        </div>
+        
+        </div>
+        <div class="div2 d-sm-none d-md-none d-lg-block">
+            <img src="{% static 'images/login_purple.svg' %}" alt="">
+          </div>
+        </div>
+        
+        
+
+
+
+      </div>
+    </div>
+  </div>
+
+  {% endblock  %}

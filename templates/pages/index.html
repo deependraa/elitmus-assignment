@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{%load static%}
+
+{% block content %}
+
+
+  <div class="container">
+    <div class="row">
+      {% for obj in query_set %}
+      <div class="col-lg-3 col-md-12 col-sm-12 event_name">
+        <div class="event_head">
+          <h1><a href="{% url 'posts:advertisement' obj.id %}">{{obj.title}}</a></h1>
+        </div>
+        <div class="DandT">
+          <h5>{{obj.created}}</h5>
+        </div>
+        <div class="enent_details">
+          <p>{{obj.content}}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+
+
+
+
+    
+  <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+  {% endblock  %}

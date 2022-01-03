@@ -27,6 +27,7 @@ Install postgresql on you machine and set up password and then open pgadmin whic
 In pgadmin make a new database with name of Elitmus assignment and in connection/Host type localhostremember and leave same as it is and click save
 
 Now go to setting.py file which you will find in assignment folder of the main directory and in their go to data base section and edit it as:
+
     DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -38,6 +39,8 @@ Now go to setting.py file which you will find in assignment folder of the main d
 
     }
   }
+  
+  
   
  Now just run some final commands :
  1)python manage.py collectstaic

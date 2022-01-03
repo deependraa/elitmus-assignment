@@ -77,10 +77,10 @@ and follow the instructions and go back to admin panel and login with the id pas
     
 What does the webiste provide and does it fullfill the assignment requirement:
 
-1)On the home page you will find bunch of advertisement which all the users have postes and you can view them by clicking on the title of the advertisement
-2)On the advertisement page you can see the content on the post and can comment on the post only if you are a registered user
-3)All the advertisement which you have created will be visible on your Dashborad if you have'nt posted any advertisement the dashboard will be blanked and you have to create new advertisement from their only by clicking on the create advertisement button and create the advertisement from their
-4)Ones you create a advertisement it will be visible on you dashboard and you you can edit and delete from thier only
-5)The app consist of A login and a signup pages which are noly visible if you are not signed in.
+      1)On the home page you will find bunch of advertisement which all the users have postes and you can view them by clicking on the title of the advertisement
+      2)On the advertisement page you can see the content on the post and can comment on the post only if you are a registered user
+      3)All the advertisement which you have created will be visible on your Dashborad if you have'nt posted any advertisement the dashboard will be blanked and you have to              create new advertisement from their only by clicking on the create advertisement button and create the advertisement from their
+      4)Ones you create a advertisement it will be visible on you dashboard and you you can edit and delete from thier only
+      5)The app consist of A login and a signup pages which are noly visible if you are not signed in.
 
     

@@ -83,7 +83,8 @@ DATABASES = {
         'NAME': 'Elitmus assignment',
         'USER': 'postgres',
         'PASSWORD': 'zxdsl6260@$b',
-        'HOST': 'localhost'
+        'HOST': 'localhost',
+        'PORT': '5432',
 
     }
 }

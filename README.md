@@ -67,7 +67,10 @@ of you want to go to the admin section onec your server id live on local host ju
     and type user name and password as :
     username :deependra_elitmus@gmail.com
     password : deependra_elitmus
-    if this username and password does not work for you the make new superuser ny going back to terminal where you enviroment is activated and type:
-    python manage.py createsuperuser, and follow the instructions and go back to admin panel and login with the id pass you created
+if this username and password does not work for you the make new superuser ny going back to terminal where you enviroment is activated and type:
+    
+    python manage.py createsuperuser
+    
+and follow the instructions and go back to admin panel and login with the id pass you created
     
     

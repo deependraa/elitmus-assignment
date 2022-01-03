@@ -2,14 +2,18 @@
 To set up project for running on you local host:
 make sure python is installed on you Machine
 download the repo and open it in your ID ex: VScode
-go to terminal and type this with the same directory as where you have cloned the project: python -m venv path
+go to terminal and type this with the same directory as where you have cloned the project:
+
+      python -m venv path
       ex:python -m venv e:/web_development/Elitmus assignment
+      
 After that activate the virtual environment that you have just make by directing to tha evvironment file 
       ex: cd e:/web_development/Elitmus assignment/venv/Scripts/activate.bat
       This will activate you virtual environment and you command line should look like this
       Ex: (venv) E:\web_development\Elitmus assignment>
 After this install all the reqirement which are in requirement.txt file of main folder, I will just give you a direct comment to install all the dependencies:
-      asgiref==3.4.1
+
+     asgiref==3.4.1
     dj-database-url==0.5.0
     Django==4.0
     django-filter==21.1
@@ -49,12 +53,17 @@ Now go to setting.py file which you will find in assignment folder of the main d
  
 And this will run the project on the port as: http://127.0.0.1:8000/
 
-You can find the live project here at: https://elitmusdeependra.herokuapp.com/ 
+You can find the live project here at:
+
+      https://elitmusdeependra.herokuapp.com/ 
+      
 but it might give a connection error of TCP IP due to static files or i might have resolved that problem till date you open the project
 I would recommend to run the project on localhost to get look in to admin section
 
 of you want to go to the admin section onec your server id live on local host just type :
+
     http://127.0.0.1:8000/admin
+    
     and type user name and password as :
     username :deependra_elitmus@gmail.com
     password : deependra_elitmus

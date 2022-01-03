@@ -10,7 +10,7 @@ class PostCreateModelForm(forms.ModelForm):
         fields = ('title','content')
 
 class PostModelForm(forms.ModelForm):
-    content = forms.Textarea(attrs={'name':'comment[text]','id':'comment[text]','cols':'60','class':'ui-autocomplete-input','autocomplete':'off','role':'textbox','aria-autocomplete':'list','aria-haspopup':'true','style':'margin-top: 10px; margin-bottom: 0px; height: 300px;'})
+    content = forms.CharField(label="", widget=forms.Textarea(attrs={'name':'comment[text]','id':'comment[text]','cols':'60','class':'ui-autocomplete-input','autocomplete':'off','role':'textbox','aria-autocomplete':'list','aria-haspopup':'true','style':'margin-top: 10px; margin-bottom: 0px; height: 300px;'}))
     class Meta:
         model = Post
         fields = ('content',)
